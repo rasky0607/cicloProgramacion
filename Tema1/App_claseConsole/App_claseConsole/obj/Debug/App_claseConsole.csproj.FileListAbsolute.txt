@@ -1,0 +1,6 @@
+C:\Users\Usuario\Desktop\App_claseConsole\App_claseConsole\bin\Debug\App_claseConsole.exe.config
+C:\Users\Usuario\Desktop\App_claseConsole\App_claseConsole\bin\Debug\App_claseConsole.exe
+C:\Users\Usuario\Desktop\App_claseConsole\App_claseConsole\bin\Debug\App_claseConsole.pdb
+C:\Users\Usuario\Desktop\App_claseConsole\App_claseConsole\obj\Debug\App_claseConsole.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\App_claseConsole\App_claseConsole\obj\Debug\App_claseConsole.exe
+C:\Users\Usuario\Desktop\App_claseConsole\App_claseConsole\obj\Debug\App_claseConsole.pdb
