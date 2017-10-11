@@ -7,3 +7,6 @@ C:\Users\Usuario\Desktop\App_claseConsole\App_claseConsole\obj\Debug\App_claseCo
 C:\repositoriosGit\cicloPogramacion\Tema1\App_claseConsole\App_claseConsole\bin\Debug\App_claseConsole.exe.config
 C:\repositoriosGit\cicloPogramacion\Tema1\App_claseConsole\App_claseConsole\obj\Debug\App_claseConsole.exe
 C:\repositoriosGit\cicloPogramacion\Tema1\App_claseConsole\App_claseConsole\obj\Debug\App_claseConsole.pdb
+C:\repositoriosGit\cicloPogramacion\Tema2\App_claseConsole\App_claseConsole\bin\Debug\App_claseConsole.exe.config
+C:\repositoriosGit\cicloPogramacion\Tema2\App_claseConsole\App_claseConsole\obj\Debug\App_claseConsole.exe
+C:\repositoriosGit\cicloPogramacion\Tema2\App_claseConsole\App_claseConsole\obj\Debug\App_claseConsole.pdb
