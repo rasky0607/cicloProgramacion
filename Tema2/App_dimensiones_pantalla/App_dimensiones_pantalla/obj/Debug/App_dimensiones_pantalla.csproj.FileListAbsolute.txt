@@ -1,0 +1,6 @@
+C:\repositoriosGit\cicloPogramacion\Tema1\App_dimensiones_pantalla\App_dimensiones_pantalla\bin\Debug\App_dimensiones_pantalla.exe.config
+C:\repositoriosGit\cicloPogramacion\Tema1\App_dimensiones_pantalla\App_dimensiones_pantalla\bin\Debug\App_dimensiones_pantalla.exe
+C:\repositoriosGit\cicloPogramacion\Tema1\App_dimensiones_pantalla\App_dimensiones_pantalla\bin\Debug\App_dimensiones_pantalla.pdb
+C:\repositoriosGit\cicloPogramacion\Tema1\App_dimensiones_pantalla\App_dimensiones_pantalla\obj\Debug\App_dimensiones_pantalla.csprojResolveAssemblyReference.cache
+C:\repositoriosGit\cicloPogramacion\Tema1\App_dimensiones_pantalla\App_dimensiones_pantalla\obj\Debug\App_dimensiones_pantalla.exe
+C:\repositoriosGit\cicloPogramacion\Tema1\App_dimensiones_pantalla\App_dimensiones_pantalla\obj\Debug\App_dimensiones_pantalla.pdb

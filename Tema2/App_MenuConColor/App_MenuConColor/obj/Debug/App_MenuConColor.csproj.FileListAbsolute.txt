@@ -1,0 +1,10 @@
+B:\Tareas Ciclo\Programacion\Tema1\Ej13\App_MenuConColor\App_MenuConColor\bin\Debug\App_MenuConColor.exe.config
+B:\Tareas Ciclo\Programacion\Tema1\Ej13\App_MenuConColor\App_MenuConColor\bin\Debug\App_MenuConColor.exe
+B:\Tareas Ciclo\Programacion\Tema1\Ej13\App_MenuConColor\App_MenuConColor\bin\Debug\App_MenuConColor.pdb
+B:\Tareas Ciclo\Programacion\Tema1\Ej13\App_MenuConColor\App_MenuConColor\obj\Debug\App_MenuConColor.exe
+B:\Tareas Ciclo\Programacion\Tema1\Ej13\App_MenuConColor\App_MenuConColor\obj\Debug\App_MenuConColor.pdb
+E:\Archivos Clase\Curso Pablo 17-18\Programacion\Tema2\Ej13\App_MenuConColor\App_MenuConColor\bin\Debug\App_MenuConColor.exe.config
+E:\Archivos Clase\Curso Pablo 17-18\Programacion\Tema2\Ej13\App_MenuConColor\App_MenuConColor\obj\Debug\App_MenuConColor.exe
+E:\Archivos Clase\Curso Pablo 17-18\Programacion\Tema2\Ej13\App_MenuConColor\App_MenuConColor\obj\Debug\App_MenuConColor.pdb
+E:\Archivos Clase\Curso Pablo 17-18\Programacion\Tema2\Ej13\App_MenuConColor\App_MenuConColor\bin\Debug\App_MenuConColor.exe
+E:\Archivos Clase\Curso Pablo 17-18\Programacion\Tema2\Ej13\App_MenuConColor\App_MenuConColor\bin\Debug\App_MenuConColor.pdb
