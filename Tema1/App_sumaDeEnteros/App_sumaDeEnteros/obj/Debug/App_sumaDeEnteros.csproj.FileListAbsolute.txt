@@ -1,5 +1,0 @@
-C:\Users\Usuario\Desktop\App_sumaDeEnteros\App_sumaDeEnteros\bin\Debug\App_sumaDeEnteros.exe.config
-C:\Users\Usuario\Desktop\App_sumaDeEnteros\App_sumaDeEnteros\bin\Debug\App_sumaDeEnteros.exe
-C:\Users\Usuario\Desktop\App_sumaDeEnteros\App_sumaDeEnteros\bin\Debug\App_sumaDeEnteros.pdb
-C:\Users\Usuario\Desktop\App_sumaDeEnteros\App_sumaDeEnteros\obj\Debug\App_sumaDeEnteros.exe
-C:\Users\Usuario\Desktop\App_sumaDeEnteros\App_sumaDeEnteros\obj\Debug\App_sumaDeEnteros.pdb
