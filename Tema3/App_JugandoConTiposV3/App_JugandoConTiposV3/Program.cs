@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ Ejemplo de introduccion a Funciones o Metodos.
+  Autor:Pablo Lopez
+  Fecha: 23-10-2017
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,8 +20,7 @@ namespace App_JugandoConTiposV3
             float b = 0F;
             float c = 0F;
             float dentroRaiz = 0F;
-            float resultado1 = 0F;// sin la "F" serian doble 0 . //Para los positivos
-            float resultado2 = 0F;//Para los negativos
+            float resultado1 = 0F;// sin la "F" serian doble 0 . //Para los positivos            
 
             Console.WriteLine("Soy un maquina resolviendo ecuaciones de 2º grado.");
             Console.WriteLine("\n===================================================\n");
