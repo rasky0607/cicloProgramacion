@@ -28,10 +28,12 @@ namespace App_Menu
             int izq = 10;
             int arriba = 5;
             int obcion = 0;
+            
             do
             {
                 Console.Clear();
-                Console.SetCursorPosition(izq, arriba);
+                Console.SetCursorPosition(izq, arriba);               
+                Console.CursorLeft = izq;
                 Console.WriteLine("M E N U   P R I N C I P A L");
                 Console.CursorLeft = izq;
                 Console.WriteLine("===============================");
@@ -47,6 +49,7 @@ namespace App_Menu
                 Console.WriteLine(" 0. Salir.");
                 Console.CursorLeft = izq + 5;
                 Console.Write("Opcion?: ");
+               
                 obcion = int.Parse(Console.ReadLine());
                 switch (obcion)
                 {
