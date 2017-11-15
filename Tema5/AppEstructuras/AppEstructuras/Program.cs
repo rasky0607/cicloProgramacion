@@ -1,6 +1,6 @@
 ﻿/*
  Autor: Pablo Lopez
- Ejemplo consola: Ejemplo de estructuras
+ Ejemplo consola: Ejemplo de estructuras  V1->sin constructor
  Fecha:13/11/2017
  */
 using System;
@@ -17,12 +17,13 @@ namespace AppEstructuras.pbl
     {
         //Contiene los datos de una persona
         public struct Persona
-        {   
-            private string  Privado;//No podemos verlo desde fuera.
+        {
+            private string  Privado;//No podemos verlo desde fuera de la estructura.
             public string Nombre;
             public DateTime FechaNacimiento;
             public float Estatura;
             public string Dni;
+
         }
         static void Main(string[] args)
         {
