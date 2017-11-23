@@ -27,7 +27,7 @@ namespace AppArrayCircular.pbl
             for (int i = 0; i < vueltas; i++)
             {
                 indice = i % tamanoSub + posIni;
-                Console.Write("Pos-> [{0}] valor-> {1}",indice,vector[indice]);
+                Console.Write("\n Pos-> [{0}] valor-> {1}",indice,vector[indice]);
             }
 
             Console.ReadLine();
