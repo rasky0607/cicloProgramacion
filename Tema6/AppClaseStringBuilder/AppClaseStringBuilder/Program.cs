@@ -62,7 +62,7 @@ namespace AppClaseStringBuilder.pbl
             Console.ReadLine();
 
         }
-
+        //Tiempo que tarda un String en hacer odificacionesy tiempo que tarda un stringBuilder
         static void NtickTrascurridosStrBuilder(int nCopias)
         { 
             //Realiza un nº de modificaciones en el String Builder indicado por un numero de copias
