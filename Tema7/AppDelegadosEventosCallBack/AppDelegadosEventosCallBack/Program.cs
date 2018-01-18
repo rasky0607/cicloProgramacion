@@ -25,6 +25,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//añadido
+using System.Threading;
 
 
 namespace AppDelegadosEventosCallBack.pbl
@@ -72,7 +74,9 @@ namespace AppDelegadosEventosCallBack.pbl
         {
             Console.SetCursorPosition(5, 5);
             Console.Write(" Eh!, es multiplo de 5!");
-            
+            Thread.Sleep(500);
+            Console.SetCursorPosition(5, 5);
+            Console.Write("                            ");
         }
 
 
