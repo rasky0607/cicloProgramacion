@@ -20,7 +20,7 @@ namespace AppIndizadores.pbl
             Bomberos.AnadirPersonasAleatoria(50);
             
             //Listamos gracias al indizador solo una parte de la lista, en este caso de la posicion 10 a la 20 gracias al Get:
-          /*  for (int i = 10; i <20; i++)
+            for (int i = 10; i <20; i++)
             {
                 Console.WriteLine(Bomberos[i].ToString());
             }
@@ -28,9 +28,10 @@ namespace AppIndizadores.pbl
             //Añadiendo una persona a traves de su indizador,gracias al Set:
             Bomberos[4] = new Persona();
             //Comprobamos que funciono
-            Console.WriteLine(Bomberos[4].ToString());*/
+            Console.WriteLine(Bomberos[4].ToString());
 
-            Bomberos.ListarPaginado("Listado de Bomberos");
+            //Listar con diferentes paginas para un mejor aspecto a este..
+           // Bomberos.ListarPaginado("Listado de Bomberos");
 
            
 
