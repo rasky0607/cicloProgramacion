@@ -26,6 +26,11 @@ namespace AppPropiedades.pbl
             f2.Edad = 27;
             f2.Nota = 16.8F;
             Console.WriteLine(f2.ToString());
+            Ficha f3 = new Ficha();
+            f3.Nombre = "";
+            f3.Edad = 27;
+            f3.Nota = 16.8F;
+            Console.WriteLine(f3.ToString());
             Console.ReadLine();
         }
     }
