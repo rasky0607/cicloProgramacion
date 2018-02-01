@@ -76,7 +76,7 @@ namespace AppDelegadosEventosCallBack.pbl
             Console.Write(" Eh!, es multiplo de 5!");
             Thread.Sleep(500);
             Console.SetCursorPosition(5, 5);
-            Console.Write("                            ");
+            Console.Write("                          ");
         }
 
 
