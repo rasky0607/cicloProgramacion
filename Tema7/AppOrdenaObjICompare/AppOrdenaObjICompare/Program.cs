@@ -2,7 +2,7 @@
  Autor: Pablo Lopez
  Ejemplo consola:ICompare(El cual necesita una clase para cada criterio de ordenacion)
  * para ordenar una coleccion de objetos con multiples criterios de ordenacion a diferencia de IComparable "El cual ordena por  un unico criterio"
- Fecha:07/02/2018
+ Fecha:07/02/2018 
  */
 using System;
 using System.Collections.Generic;
