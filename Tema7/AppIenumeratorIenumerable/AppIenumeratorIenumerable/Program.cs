@@ -19,10 +19,10 @@ namespace AppIenumeratorIenumerable.pbl
         static void Main(string[] args)
         {
             Lista milista = new Lista();
-            foreach (int tmp in milista)
-            {
+
+            foreach (int tmp in milista)            
                 Console.Write("\t {0}", tmp);
-            }
+            
             Console.ReadLine();
         }
 
