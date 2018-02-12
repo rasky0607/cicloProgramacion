@@ -3,7 +3,7 @@
  Ejemplo consola:Implementacion del interfaz IComparable para ordenar objetos o tipo de datos complejo
  * bajo un criterio de ordenacion definido en el metodo CompareTo() que implementa este interfaz
  * una vez realizado esto, n uestro metodo Sort() sabra ordenar tipo de datos complejos o  Objetos
- Fecha:07/02/2018
+ Fecha:07/02/2018 
  */
 using System;
 using System.Collections.Generic;
