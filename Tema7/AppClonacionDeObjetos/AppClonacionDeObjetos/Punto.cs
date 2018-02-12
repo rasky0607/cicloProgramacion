@@ -71,7 +71,9 @@ namespace AppClonacionDeObjetos
        public object Clone()
        {
           Rectangulo c = new Rectangulo();
-          c = (Rectangulo)this.MemberwiseClone();
+         // c = (Rectangulo)this.MemberwiseClone();
+          c.textura = this.textura;
+          c.color = this.color;
           for (int i = 0; i < puntos.Length; i++)//Aqui es donde radica la copia profunda ya qeue estamos copiando uan estructura por referencia de un lado a otro.         
               c.puntos[i] = this.puntos[i];
           

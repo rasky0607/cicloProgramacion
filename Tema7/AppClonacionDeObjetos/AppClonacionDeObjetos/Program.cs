@@ -1,7 +1,7 @@
 ﻿/*
  Autor: Pablo Lopez
  Ejemplo consola:Ejemplo de clonacion de Objetos usando la colnacion Simple o superficial
- * y la clonacion Profunda(usando una clase Punto yotra Rectangulo)
+ * y la clonacion Profunda(usando una clase Punto y otra Rectangulo)
  Fecha:05/02/2018
  */
 using System;
@@ -49,9 +49,7 @@ namespace AppClonacionDeObjetos.pbl
            Console.Clear();
            #region Copia Profunda
            Console.WriteLine("\n Copia profunda con la calse Punto y Rectangulo\n");
-           Rectangulo r2copia = (Rectangulo)r1.Clone();
-           r2copia.puntos[0].X = 0;
-           r2copia.puntos[0].Y = 0;
+           Rectangulo r2copia = (Rectangulo)r1.Clone();      
            r2copia.InformacionPunto();
            r2copia.Dibuja();
 
