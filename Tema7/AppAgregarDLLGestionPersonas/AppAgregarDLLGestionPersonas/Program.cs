@@ -7,6 +7,12 @@
  * para ello nos dirigmos al explorador de soluciones click derecho dentro de "References" 
  * -> "Agregar Referencia" -> click en Boton Examinar-> y buscamos la carpeta donde este guardada nuestra DLL
  * por ultimo para poder usarla , añadimos el espacio de nombre de nuestra DLL a nuestro proyecto para poder usarla.
+ * 
+ *  -Para que muestre la AYUDA de nuestra DLL EXTERNA: deberiamos haber generado el fichero de ayuda XML al compilar nuestra DLL y habernos llevado este fichero XML al mismo lugar donde  dejamos nuestro DLL que hemos 
+  exportado anteriormente.
+ 
+    *(para crear este fichero de ayuda XML donde generemos la DLL, deberemos dirigirnos a explorador de soluciones -> click derecho-> propiedades->compilar-> y abajo del todo marcamos la casilla de "Archivo de documentacion XML"
+       Esto generara el fichero de ayuda que necesitamospara nuestra DLL
  */
 
 using System;
