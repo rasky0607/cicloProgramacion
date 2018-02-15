@@ -23,9 +23,14 @@ using System.Windows.Forms;
    -Una de .NET: Nos dirigimso al explorador de soluciones, hacemos click derecho encima de "References" ->"Agregar referencia"->Dentro de Ensamlado  en Framework 
    buscamos y marcamos la que necesitemos en este caso "System.Windows.Forms;"
   
+  
   -Una Externa: Relizamos los mismo pasos, pero  en lugar de dirigirnos a Ensamlado  en Framework;  nos dirigimos al boton examinar que encontraremos abajo.. y buscamos
   la carpeta concreta en la que esta nuesta DLL o libreria Externa, y ya podremos colocar su Using y usarla.
+ -Para que muestre la AYUDA de nuestra DLL EXTERNA: deberiamos haber generado el fichero de ayuda XML al compilar nuestra DLL y habernos llevado este fichero XML al mismo lugar donde  dejamos nuestro DLL que hemos 
+  exportado anteriormente.
  
+    *(para crear este fichero de ayuda XML donde generemos la DLL, deberemos dirigirnos a explorador de soluciones -> click derecho-> propiedades->compilar-> y abajo del todo marcamos la casilla de "Archivo de documentacion XML"
+       Esto generara el fichero de ayuda que necesitamospara nuestra DLL
  */
 //-----------------------------------------------------
 
@@ -49,6 +54,7 @@ namespace pbl.App_POOEspaciosNombreYReferenciaDLL
 
     class HolaMundo
     {
+       
         public static void Principal()//Al ser un miembro estatico de esta clase solo podremos acceder ael a traves del nombre de la calse punto y el nombre del mienbro,"NO creando un objeto de dicha clase"
         {
             Console.WriteLine("Hola Mundo... desde App_POOEspaciosNombreYReferenciaDLL.pbl.HolaMundo.Principal()");
