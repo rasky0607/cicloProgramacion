@@ -1,7 +1,7 @@
 ﻿/*
  Autor: Pablo Lopez
  Ejemplo consola:Ejemplo de uso de clases BinaryWriter y BinaryReader usada para manejar ficheros binarios.
- Fecha:08/03/2018
+ Fecha:08/03/2018 
  */
 using System;
 using System.Collections.Generic;
