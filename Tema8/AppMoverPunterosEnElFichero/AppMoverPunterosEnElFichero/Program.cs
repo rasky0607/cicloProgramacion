@@ -1,7 +1,7 @@
 ﻿/*
  Autor: Pablo Lopez
  Ejemplo consola:Mueve el puntero del fichero a las posiciones deseadas
- Fecha:
+ Fecha:08/03/2018
  */
 using System;
 using System.Collections.Generic;
