@@ -1,6 +1,6 @@
 ﻿/*
  Autor: Pablo Lopez
- Ejemplo consola:Ejemeplo de uso de la clase StreamWrite
+ Ejemplo consola:Ejemeplo de uso de la clase StreamWrite 
  Fecha:08/03/2018
  */
 using System;
