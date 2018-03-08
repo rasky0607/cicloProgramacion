@@ -1,6 +1,6 @@
 ﻿/*
  Autor: Pablo Lopez
- Ejemplo consola:Serializacion de una clase persona
+ Ejemplo consola:Serializacion de una clase persona 
  Fecha:08/03/2018
  */
 using System;
