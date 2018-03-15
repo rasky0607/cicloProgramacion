@@ -1,0 +1,22 @@
+﻿<Window x:Class="PanelesBasicosWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Paneles Basicos" Height="350" Width="525">
+    <Grid>
+        <!-- Caracteristica principal de StackPanel: organiza automaticamente los controles que contiene
+             horizontal o verticalmente segun le indiquemos con su propiedad "orientation" por defecto es vertical.-->
+        <StackPanel Name="stcPanel" Background="Aqua" Orientation="Horizontal" Margin="10,50,10,185">
+            <Button Content="Button" Width="75"/>
+            <Button Content="Button" Width="75"/>
+        </StackPanel>
+        <!--Caracteristica principal de DockPanel:podemos  indicarle donde queremos que se muestre dentro del contenedor.. arriba bajo en el centro etc.. y su area de distribucion -->
+        <DockPanel Background="Bisque" HorizontalAlignment="Left" Height="112" LastChildFill="True" Margin="10,158,0,0" VerticalAlignment="Top" Width="489">
+            <!--Caracteristicas pricipal de Imagen contenedor de imagenes el cual usaremos el atributo "source" para indicarle la ruta donde encuentra el recurso o imagen  -->
+            <Image Height="87" VerticalAlignment="Top" Width="100" Source="./imagenes/Penguins.jpg"/>
+        </DockPanel>
+
+        <Label Content="StackPanel:" HorizontalAlignment="Left" Margin="213,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic" Width="85" Height="35"/>
+        <Label Content="DockPanel y Image: " HorizontalAlignment="Left" Margin="191,132,0,0" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic" Width="139"/>
+
+    </Grid>
+</Window>
