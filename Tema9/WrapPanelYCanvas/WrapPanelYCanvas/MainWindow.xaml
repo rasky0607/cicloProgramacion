@@ -1,0 +1,29 @@
+﻿<Window x:Class="WrapPanelYCanvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="518.421" Width="572.368">
+    <Grid>
+        <ScrollViewer Margin="0,0,0,175" Background="AntiqueWhite">
+            <!-- Ordena lso elementos en horizontal o vertical uno detras de otro hasta rellenar todo el espacio disponible , en caso de que este todo ele spacio ocupado, usaremos un scrollviwer-->
+            <WrapPanel Orientation="Horizontal" Height="145">
+                <Image Height="100" Width="100" Source="imagenes/img1.jpg"/>
+                <Image Height="100" Width="100" Source="imagenes/img2.jpg"/>
+                <Image Height="100" Width="100" Source="imagenes/img3.jpg"/>
+                <Image Height="100" Width="100" Source="imagenes/img4.jpg"/>
+                <Image Height="100" Width="100" Source="imagenes/img5.jpg"/>
+                <Image Height="100" Width="100" Source="imagenes/img6.jpg"/>
+                <Image Height="100" Width="100" Source="imagenes/img3.jpg"/>
+                <Image Height="100" Width="100" Source="imagenes/img1.jpg"/>
+            </WrapPanel>
+        </ScrollViewer>
+        <Canvas Name="cvContenedor" HorizontalAlignment="Left" Height="160" Margin="0,261,0,0" VerticalAlignment="Top" Width="546" Background="Azure">
+            <Rectangle Height="45" Canvas.Left="195" Canvas.Top="22" Width="45" Fill="Black"/>
+            <!-- si nos fijamos la propiedades  top  yleft son de devendencia Canvas.Left Canvas.Top-->
+
+
+        </Canvas>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="28,437,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+
+
+    </Grid>
+</Window>
