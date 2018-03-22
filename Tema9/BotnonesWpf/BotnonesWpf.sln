@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotnonesWpf", "BotnonesWpf\BotnonesWpf.csproj", "{EDE7BE50-5FE9-459F-A249-73E28B0F8B91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDE7BE50-5FE9-459F-A249-73E28B0F8B91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE7BE50-5FE9-459F-A249-73E28B0F8B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE7BE50-5FE9-459F-A249-73E28B0F8B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE7BE50-5FE9-459F-A249-73E28B0F8B91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
