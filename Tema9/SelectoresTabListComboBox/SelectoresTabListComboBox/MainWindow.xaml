@@ -1,0 +1,49 @@
+﻿<Window x:Class="SelectoresTabListComboBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="421.053" Width="575">
+    <Grid>
+        <Grid Margin="0,0,0,125" Background="Bisque">
+            <StackPanel>
+                <ComboBox Margin="10" SelectedIndex="0">
+                    <!--Propieda selected Index, seleciona el elemento por defecto de la coleccion-->
+                    <TextBlock FontFamily="Arial" FontWeight="Bold">Almería</TextBlock>
+                    <TextBlock FontFamily="Arial" FontWeight="Bold">Malaga</TextBlock>
+                    <TextBlock FontFamily="Arial" FontWeight="Bold">Sevilla</TextBlock>
+                    <TextBlock FontFamily="Arial" FontWeight="Bold">Cadiz</TextBlock>
+                </ComboBox>
+                <ListBox Name="listb" Margin="10" SelectionMode="Multiple">
+                    <Button Content="Accion 1"/>
+                    <Button Content="Cccion 2"/>
+                    <Button Content="Bccion 3"/>
+                </ListBox>
+                <Button Name="btnOrdenar" Content="Ordenar Ascendente" Click="btnOrdenar_Click"/>
+                <Label Name="lbTipoDeOrdenacion" FontSize="20" HorizontalAlignment="Left" Margin="15">Ordenado</Label>
+                <ComboBox Name="cbx" Text="Seleciona la ordenacion..." IsEditable="True" SelectionChanged="cbx_SelectionChanged">
+                    <!--Al seleccionar uno, automaticamente se ordena-->
+                    <ComboBoxItem>Ascendente</ComboBoxItem>
+                    <ComboBoxItem>Descendente</ComboBoxItem>
+                </ComboBox>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid HorizontalAlignment="Left" Height="125" Margin="0,258,0,0" VerticalAlignment="Top" Width="559" Background="Beige">
+            <TabControl Name="tbc" HorizontalAlignment="Left" Margin="10,10,0,10" Width="539" SelectionChanged="TabControl_SelectionChanged">
+                <TabItem Header="Datos laborales">
+                    <Grid>
+                        <Button Content="boton1" Margin="20"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Datos laborales">
+                    <Grid>
+                        <Button Content="boton2" Margin="10,30,30,10"/>
+                        <Label Content=" esto es mas contenido"/>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+
+
+</Window>

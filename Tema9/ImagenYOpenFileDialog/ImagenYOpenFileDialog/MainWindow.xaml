@@ -1,0 +1,15 @@
+﻿<Window x:Class="ImagenYOpenFileDialog.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ejemplo imagenes" Height="350" Width="525">
+    <Grid>
+        <!--Ejemplo con Imagenes NO añadidas a nuestro proyecto-->
+        <Image Name="imgImagen" HorizontalAlignment="Left" Height="167" Margin="47,31,0,0" VerticalAlignment="Top" Width="152"/>
+        <Button Name="btnCargarImagen" Content="Cargar Imagen Fuera del Proyecto" HorizontalAlignment="Left" Margin="25,203,0,0" VerticalAlignment="Top" Width="199" Height="35" Click="btnCargarImagen_Click"/>
+        <!--Ejemplo con Imagenes añadidas a nuestro proyecto-->
+        <Image Name="imgImagen2" HorizontalAlignment="Left" Height="167" Margin="303,31,0,0" VerticalAlignment="Top" Width="147"/>
+        <Button Name="btcargarImagen2" Content="Cargar Imagen asociadas al proyecto" HorizontalAlignment="Left" Margin="286,203,0,0" VerticalAlignment="Top" Width="213" Height="40" Click="btcargarImagen2_Click"/>
+
+
+    </Grid>
+</Window>

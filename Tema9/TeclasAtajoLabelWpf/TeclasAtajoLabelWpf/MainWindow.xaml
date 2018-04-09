@@ -1,0 +1,31 @@
+﻿<Window x:Class="TeclasAtajoLabelWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+            <TextBlock FontFamily="Arial" FontSize="30" TextAlignment="Center" Margin="20">Entrada de datos</TextBlock>
+            <DockPanel>
+                <Label Name="lbEtiqueta1" VerticalAlignment="Center" Target="{Binding ElementName=tbxNombre}">
+                    <!--Al pulsar ahora ALT y N o la  letra subrayada, cambiara el foco a el control tbxNombre-->
+                    <AccessText>_Nombre</AccessText>
+                    <!--Teclas atajo label o subrallado de palabras(al ejecutar si pulsamos ALT se subrayara la primera letra-->
+                </Label>
+                <TextBox Name="tbxNombre" Margin="10" FontSize="15" VerticalAlignment="Center"/>
+            </DockPanel>
+            <DockPanel>
+                <Label Name="lbEtiqueta2" VerticalAlignment="Center" Target="{Binding ElementName=tbxApellidos}">
+                    <AccessText>_Apellidos</AccessText>
+                    <!--Teclas atajo label-->
+                </Label>
+                <TextBox Name="tbxApellidos" Margin="10" FontSize="15" VerticalAlignment="Center"/>
+            </DockPanel>
+            <Label>
+                <StackPanel Orientation="Horizontal">                   
+                    <Image Width="32" Height="32" Source="Lighthouse.jpg"/>
+                    <Label VerticalAlignment="Center">label con contenido mixto</Label>
+                </StackPanel>
+            </Label>
+        </StackPanel>
+    </Grid>
+</Window>
