@@ -1,0 +1,81 @@
+﻿<Window x:Class="MenusYRecursosConEstilosWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ejemplos Menus y Recursos" Height="350" Width="525">
+    <Window.Resources>
+        <!--Creando un recurso estatico,"los estilos siempre necesitan una clave osea un nombre-->
+        <Style x:Key="estiloMenu" TargetType="Menu">
+            <Setter Property="Background" Value="Brown"/>
+            <!--propiedad y valor de la propiedad-->
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+    </Window.Resources>
+
+    <!--Menu Contextual a nivel de ventana -->
+    <Window.ContextMenu><!--Este control a no ser un control visible, no es necesario colocarlo dentro del grid, ya que despues lo asociaremos al control sobre el que se ejecuta dicho menu contextual-->
+        <ContextMenu>
+            <MenuItem Header="C_opiar" Click="MenuContextualCopiarClick"/>
+            <MenuItem Header="Cortar"/>
+            <Separator/>
+            <MenuItem Header="Pegar"/>
+        </ContextMenu>
+    </Window.ContextMenu>
+
+    <Grid>
+        <!--En el control que vamos a asociar el estilo, aplicamos la propiedad Style-->
+        <!--Menu normal, principal o barra de herramientas-->
+        <StackPanel>
+        <Menu Style="{StaticResource estiloMenu}"  HorizontalAlignment="Stretch" Height="22" VerticalAlignment="Top" >
+            <MenuItem>
+                <MenuItem.Header>Archivo</MenuItem.Header>
+                <MenuItem Header="_Abrir">
+                    <MenuItem.Icon>
+                        <Image Source="img/img1.jpg" Height="21"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+                <MenuItem Header="_Nuevo"/>
+                <Separator></Separator>
+                <MenuItem Header="_Salir"/>
+            </MenuItem>
+            <MenuItem>
+                <MenuItem.Header>Editar</MenuItem.Header>
+                <MenuItem Header="_Cortar"/>
+                <MenuItem Header="C_opiar"/>
+                <MenuItem Header="_Pegar"/>
+            </MenuItem>
+            <MenuItem>
+                <MenuItem.Header>Ayuda</MenuItem.Header>
+                <MenuItem Header="Ver ayuda"/>
+                <MenuItem Header="Ejemplos"/>
+                <Separator/>
+                <MenuItem Header="Acerca de.." Click="AyudaAcercaDe_Click"/>
+            </MenuItem>
+            <MenuItem Header="Herramientas" Name="misHerramientas" IsCheckable="True" IsChecked="True" Click="misHerramientas_Click"/>
+        </Menu>
+     
+        
+        <!--Barras de herramienta o toolbar y propiedad "tooltip"como ayuda  sobre la accion del control-->       
+            <ToolBar Background="Azure">
+                <Button Width="48" ToolTip="Esto es una ayuda.. o sugerencia..">
+                    <Image Source="img/img1.jpg"/>
+                </Button>
+            </ToolBar>
+
+            <Button Content="boton 1" HorizontalAlignment="Left" Margin="82,137,0,0" VerticalAlignment="Top" Width="88" Height="43">
+                <Button.ContextMenu>
+                    <!--Menu contextual a nivel del boton-->
+                    <ContextMenu>
+                        <MenuItem Header="Accion1" IsCheckable="True" IsChecked="True"/>
+                        <MenuItem Header="Acccion2"/>
+                        <Separator/>
+                        <MenuItem Header="Accion3"/>
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="Expander.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">  
+    <Grid>          
+<!--Este control oculta y muestra otros controles, aun que solo puede contener un control pero este puede ser otro contenedor con otros muchos controles-->
+            <Expander Background="Azure" FontSize="20" Foreground="BurlyWood" HorizontalAlignment="Left" Header=" Lista de controles" ExpandDirection="Down" IsExpanded="True">
+                <StackPanel>
+                    <RadioButton FontSize="15">po claro</RadioButton>
+                    <RadioButton FontSize="15">e  o no e</RadioButton>
+                    <RadioButton FontSize="15">aro que si</RadioButton>
+                    <RadioButton FontSize="15"> pa ti cuando me pea</RadioButton>                    
+                </StackPanel>
+            </Expander>     
+    </Grid>
+</Window>
