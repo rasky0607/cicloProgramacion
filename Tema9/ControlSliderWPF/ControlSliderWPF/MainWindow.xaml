@@ -1,0 +1,15 @@
+﻿<Window x:Class="ControlSliderWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Image Name="imgImagen" HorizontalAlignment="Left" Height="162" Margin="132,34,0,0" VerticalAlignment="Top" Width="217" Source="img/img1.jpg" Stretch="Fill"/>
+        <Slider Name="sldAnchura" HorizontalAlignment="Left" Margin="85,231,0,0" VerticalAlignment="Top" Width="328" ValueChanged="sldAnchura_ValueChanged" Minimum="100" Maximum="700"/>
+        <Slider Name="sldAltura" HorizontalAlignment="Left" Margin="440,34,0,0" VerticalAlignment="Top" Width="34" Orientation="Vertical" Height="197" ValueChanged="sldAltura_ValueChanged" Maximum="700" Minimum="100"/>
+        <Label Content="Ancho" HorizontalAlignment="Left" Margin="225,258,0,0" VerticalAlignment="Top"/>
+        <Label Content="Alto" HorizontalAlignment="Left" Margin="440,8,0,0" VerticalAlignment="Top"/>
+        <Slider x:Name="sldOpacidad" HorizontalAlignment="Left" Margin="36,34,0,0" VerticalAlignment="Top" Orientation="Vertical" Height="175" ValueChanged="sldOpacidad_ValueChanged" Maximum="1"/>
+        <Label Content="Opacidad:" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
