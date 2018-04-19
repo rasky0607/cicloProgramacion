@@ -1,0 +1,46 @@
+﻿<Window x:Class="ComandosMenu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <!--Ejemplo de menu,menu contextual, barra de herramientas y barra de estado con comandos -->
+    
+    <Window.CommandBindings><!--Redefinicion de comandos-->
+        <CommandBinding Command="Open" CanExecute="OpenCommandBinding_CanExecute" Executed="OpenCommandBinding_Executed"/>
+        <CommandBinding Command="Close" CanExecute="CloseCommandBinding_CanExecute" Executed="CloseCommandBinding_Executed"/>
+    </Window.CommandBindings>
+    <Grid>      
+        <Menu HorizontalAlignment="Stretch" Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Archivo">
+                <MenuItem Header="Abrir" Command="Open"/>
+                <MenuItem Header="Cerrar" Command="Close"/>
+                <Separator/>
+                <MenuItem Header="Salir"/>
+            </MenuItem>
+            <MenuItem Header="Editar">
+                <MenuItem Header="Copiar"/>
+                <MenuItem Header="Cortar"/>
+                <Separator/>
+                <MenuItem Header="Pegar"/>
+            </MenuItem>
+        </Menu>
+        <!--Barra de herramientas-->
+        <ToolBar HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="30" Margin="0,25,0,0">
+            <Button Command="Open">
+                <Image ToolTip="Abrir fichero" Source="img/open.ico"/>                           
+            </Button>
+            <Button Command="Close">
+                <Image ToolTip="Cerrar Fichero" Source="img/close.ico"/>
+            </Button>
+            <Button Command="Save">
+                <Image ToolTip="Guardar Fichero" Source="img/save.ico"/>
+            </Button>        
+        </ToolBar>
+        <!--Barra de estado-->
+        <StatusBar VerticalAlignment="Bottom" Height="30">
+            <Button Background="Azure" Content="Enviar mensaje"/>
+            <Separator/>
+            <TextBlock Name="tbxMensaje" Text="Aqui se muestra la informacion de la ventana"/>
+        </StatusBar>
+       
+    </Grid>
+</Window>
