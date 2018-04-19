@@ -1,0 +1,14 @@
+﻿<Window x:Class="IntercambiosDatosEntreVentanas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ventana 1" Height="269.737" Width="272.368">
+    <!--Intercambio de datos entre ventanas con eventos.-->
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="59,62,0,0" TextWrapping="Wrap" Text="Dato 1: " VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock Name="tbxdato1" HorizontalAlignment="Left" Margin="133,62,0,0" TextWrapping="Wrap" Text="Vacio" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="59,94,0,0" TextWrapping="Wrap" Text="Dato 2: " VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock Name="tbxdato2" HorizontalAlignment="Left" Margin="133,94,0,0" TextWrapping="Wrap" Text="Vacio" VerticalAlignment="Top" FontSize="20"/>
+        <Button Content="Leer datos" HorizontalAlignment="Left" Margin="88,153,0,0" VerticalAlignment="Top" Width="75" FontSize="15" Click="Button_Click"/>
+
+    </Grid>
+</Window>
