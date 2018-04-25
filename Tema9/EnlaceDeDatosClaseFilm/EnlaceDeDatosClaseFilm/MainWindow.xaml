@@ -1,0 +1,68 @@
+﻿<Window x:Class="pbl.EnlaceDeDatosClaseFilm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="477.3" Width="563"  
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:ejemplo="clr-namespace:pbl.EnlaceDeDatosClaseFilm">
+    <!--"clr-namespace:pbl.EnlaceDeDatosClaseFilm"- >  Espacio de nombre de la clase Fils.cs-->
+    <!--Enlaza al XAML el espacio de nombre de mi nueva clase Films  xmlns:ejemplo="clr-namespace:pbl.EnlaceDeDatosClaseFilm">-->
+
+    <!--Si es una DLL hay que añadirle un parametro mas, y el nombre de la DLL-->
+    <!-- Ej: Referencia al tipo de datos del esamblado. 
+            de si es una DLL lo que hay que añadirle  xmlns:system="clr-namespace:System;assembly=mscorlib"-->
+
+    <!--Recurso para añadir objetos, cada recurso debe tener una CLAVE unica que se colcoa con la propieda "KEY" del espacio de nobmre X-->
+    <!--Para crear un objeto  de la clase en el XAML -->
+    <Window.Resources>
+        <ejemplo:Films x:Key="filmInfiltrados"
+                       Titulo="Infiltrados"
+                       Genero="Mafia"
+                       Oscar="{x:Null}"
+                       Calificacion="4.7">
+            <ejemplo:Films.Director>
+                <ejemplo:Director Nombre="Martin Scorcese" Nacionalidad="USA"/>
+                <!--Añade un director-->
+            </ejemplo:Films.Director>
+            <ejemplo:Films.Actores>
+                <!--Añade un Actore des de la DLL que añadimos con su espacio de nobmre system..-->
+                <system:String>Leonardo Di Caprio</system:String>
+                <system:String>Jack Nicholsono</system:String>
+                <system:String>Martin Scheen</system:String>
+                <system:String>Alec Baldwink</system:String>
+
+            </ejemplo:Films.Actores>
+        </ejemplo:Films>
+    </Window.Resources>
+
+
+    <Grid Margin="0,0,-26,-48" Background="Azure">
+        <!--Titutlo de los campos-->
+        <Label Content="Nombre Film: " HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Género: " HorizontalAlignment="Left" Margin="28,86,0,0" VerticalAlignment="Top"/>
+        <Label Content="Oscar: " HorizontalAlignment="Left" Margin="28,146,0,0" VerticalAlignment="Top"/>
+        <Label Content="Calificación: " HorizontalAlignment="Left" Margin="28,211,0,0" VerticalAlignment="Top"/>
+        <Label Content="Director: " HorizontalAlignment="Left" Margin="28,284,0,0" VerticalAlignment="Top"/>
+        <Label Content="1-Protagonista: " HorizontalAlignment="Left" Margin="28,325,0,0" VerticalAlignment="Top"/>
+
+        <!--Valores FIJOS de los campos-->
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="127,13,0,0" TextWrapping="Wrap" Text="{Binding Titulo, Source={StaticResource filmInfiltrados}}" VerticalAlignment="Top" Width="120" Foreground="#FF0E7FCD" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="127,89,0,0" TextWrapping="Wrap" Text="{Binding Genero, Source={StaticResource filmInfiltrados}}" VerticalAlignment="Top" Width="120" Foreground="#FF0E7FCD" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="127,149,0,0" TextWrapping="Wrap" Text="{Binding Oscar, Source={StaticResource filmInfiltrados}}" VerticalAlignment="Top" Width="21" Foreground="#FF0E7FCD" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="127,211,0,0" TextWrapping="Wrap" Text="{Binding Calificacion, Source={StaticResource filmInfiltrados}}" VerticalAlignment="Top" Width="120" Foreground="#FF0E7FCD" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="127,284,0,0" TextWrapping="Wrap" Text="{Binding Director.Nombre, Source={StaticResource filmInfiltrados}}" VerticalAlignment="Top" Width="120" Foreground="#FF0E7FCD" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="127,328,0,0" TextWrapping="Wrap" Text="{Binding Actores[0], Source={StaticResource filmInfiltrados}}" VerticalAlignment="Top" Width="120" Foreground="#FF0E7FCD" FontWeight="Bold" FontStyle="Italic"/>
+
+        <!--Valores EDITABLES de los campos-->
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="296,13,0,0" TextWrapping="Wrap" Text="{Binding Titulo, Source={StaticResource filmInfiltrados}}" VerticalAlignment="Top" Width="120" Foreground="#FFF36705" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="296,86,0,0" TextWrapping="Wrap" Text="{Binding Genero, Source={StaticResource filmInfiltrados}}" VerticalAlignment="Top" Width="120" Foreground="#FFF36705" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="296,149,0,0" TextWrapping="Wrap" Text="{Binding Oscar, Source={StaticResource filmInfiltrados}}" VerticalAlignment="Top" Width="20" Foreground="#FFF36705" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="296,213,0,0" TextWrapping="Wrap" Text="{Binding Calificacion, Source={StaticResource filmInfiltrados}}" VerticalAlignment="Top" Width="120" Foreground="#FFF36705" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="296,287,0,0" TextWrapping="Wrap" Text="{Binding Director.Nombre, Source={StaticResource filmInfiltrados}}" VerticalAlignment="Top" Width="120" Foreground="#FFF36705" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="296,328,0,0" TextWrapping="Wrap" Text="{Binding Actores[0], Source={StaticResource filmInfiltrados}}" VerticalAlignment="Top" Width="120" Foreground="#FFF36705" FontWeight="Bold" FontStyle="Italic"/>
+       
+        <!--Cambiar el valor de la propiedad  Titulo y otros en la Clase-->
+        <Button Name="btnCambiar" Content="Cambiar en la Clase" HorizontalAlignment="Left" Margin="241,387,0,0" VerticalAlignment="Top" Width="121" Height="24" Click="btnCambiar_Click"/>
+
+
+    </Grid>
+</Window>
