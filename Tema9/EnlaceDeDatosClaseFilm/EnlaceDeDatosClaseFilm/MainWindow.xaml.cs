@@ -26,11 +26,12 @@ namespace pbl.EnlaceDeDatosClaseFilm
         }
 
         private void btnCambiar_Click(object sender, RoutedEventArgs e)
-        {
-            Films film = Resources["filmInfiltrados"] as Films;//Referencia al objeto que hemos creado en el XAML
+        {                   //Resources accede a la clave o la key "x:Key" del objeto en el XAML
+            Films film = Resources["filmInfiltrados"] as Films;//Creamos un objeto que en lugar de ser uno nuevo apunta a el objeto "filmInfiltrados" que hemos creado en el XAML
             if (film == null)//Por si no puede enlazarse a este objeto"film"
                 return;
-            //Camabiara en la clase y el interfaz por estos valores.
+            //Solo se cambiara las propiedades las que tengan programado el evento NotifyPropertyChanged
+            //Cambiara en la clase y el interfaz por estos valores.
             film.Titulo = "Te lo borre";
             film.Genero = Genero.Catastrofismo;
             film.Calificacion = 3.3;

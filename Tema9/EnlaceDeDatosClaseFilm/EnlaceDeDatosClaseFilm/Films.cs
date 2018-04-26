@@ -33,14 +33,15 @@ namespace pbl.EnlaceDeDatosClaseFilm
 
     class Films: Notificador
     {
-        /*Campos*/
+        //ObservableCollection Es un tipo de lsita especial que ya implementa  INotifyPropertyChanged ya de por si entre otros, para que se sincronice autmaticamente.
+       
         #region Campos
 
         string _titulo;
         Genero _genero;
         bool? _oscar; //Con interrogacion, que es un valor que puede ser Nullo tambien
         double _calificacion;
-        ObservableCollection<string> _actores = new ObservableCollection<string>(); //de cada pelicula que tienun unico director.
+        ObservableCollection<string> _actores = new ObservableCollection<string>(); //de cada pelicula que tiene un unico director.
         Director _director;
 
         #endregion
