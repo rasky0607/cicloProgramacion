@@ -1,0 +1,96 @@
+﻿<Window x:Class="WpfEnlaceADatos_ObjetoNegocio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        xmlns:ejemplo="clr-namespace:Sebas.WpfEnlaceADatos_ObjetoNegocio"
+        xmlns:system="clr-namespace:System;assembly=mscorlib" >
+    
+    
+    <Window.Resources>
+        <ejemplo:Film x:Key="filmInfiltrados" Titulo="Infiltrados" Genero="Mafia" 
+                                              Oscar="{x:Null}" Calificacion="4.7">
+            <!-- Añadir datos del director -->
+            <ejemplo:Film.DirectorFilm>
+                <ejemplo:Director Nombre="Martin Scorcese" Nacionalidad="USA"/>
+            </ejemplo:Film.DirectorFilm> 
+            <!-- Añado los actores -->
+            <ejemplo:Film.Actores>
+                <system:String>Leonardo Di Caprio</system:String>
+                <system:String>Jack Nicholson</system:String>
+                <system:String>Mat Dammon</system:String>
+                <system:String>Martin Scheen</system:String>
+                <system:String>Alec Baldwin</system:String>
+            </ejemplo:Film.Actores>
+        </ejemplo:Film>
+
+        
+    </Window.Resources>
+
+    <Grid Margin="0,0,0,-3">
+        <TabControl Background="#FFCFB2B2">
+
+            <!-- Visualización del objeto de negocios -->
+            <TabItem Header="Visualizar Film">
+                <StackPanel Orientation="Horizontal" Margin="10,2,30,38">
+                    <StackPanel Margin="20">
+                        <TextBlock Margin="10" Text="Nombre del Film:"/>
+                        <TextBlock Margin="10" Text="Género:"/>
+                        <TextBlock Margin="10" Text="Ganó Oscar?:"/>
+                        <TextBlock Margin="10" Text="Calificación:"/>
+                        <TextBlock Margin="10" Text="Director:"/>
+                        <TextBlock Margin="10" Text="Primer protagonista:"/>
+                    </StackPanel>
+                    <StackPanel Name="stpDatos" DataContext="{StaticResource filmInfiltrados}" Margin="20" Width="202">
+                        <TextBlock  Margin="10" FontWeight="Bold" Text="{Binding Titulo}"/>
+                        <TextBlock  Margin="10" FontWeight="Bold" Text="{Binding Genero}"/>
+                        <TextBlock  Margin="10" FontWeight="Bold" Text="{Binding Oscar}"/>
+                        <TextBlock  Margin="10" FontWeight="Bold" Text="{Binding Calificacion}"/>
+                        <TextBlock  Margin="10" FontWeight="Bold" Text="{Binding DirectorFilm.Nombre}"/>
+                        <TextBlock  Margin="10" FontWeight="Bold" Text="{Binding Actores[0]}"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Edición del objeto de negocios -->
+            <TabItem Header="Editar Film">
+                <StackPanel Orientation="Horizontal" Margin="10,2,30,38">
+                    <StackPanel Margin="20">
+                        <TextBlock Margin="10" Text="Nombre del Film:"/>
+                        <TextBlock Margin="10" Text="Género:"/>
+                        <TextBlock Margin="10" Text="Ganó Oscar?:"/>
+                        <TextBlock Margin="10" Text="Calificación:"/>
+                        <TextBlock Margin="10" Text="Director:"/>
+                        <TextBlock Margin="10" Text="Primer protagonista:"/>
+                    </StackPanel>
+                    <StackPanel Margin="20,20,20,10" Width="192">
+                        <TextBox  Margin="10,10,-75,10" 
+                            Text="{Binding Titulo, Source={StaticResource filmInfiltrados}}" 
+                            FontWeight="Bold"/>
+                        <TextBox  Margin="10,10,-50,10" 
+                            Text="{Binding Genero, Source={StaticResource filmInfiltrados}}" 
+                            FontWeight="Bold"/>
+                        <TextBox  Margin="10,10,117,10" 
+                            Text="{Binding Oscar, Source={StaticResource filmInfiltrados}}" 
+                            FontWeight="Bold"/>
+                        <TextBox  Margin="10,10,117,10" 
+                            Text="{Binding Calificacion, 
+                                   Source={StaticResource filmInfiltrados}}" 
+                            FontWeight="Bold"/>
+                        <TextBox  Margin="10" 
+                            Text="{Binding DirectorFilm.Nombre, Source={StaticResource filmInfiltrados}}" 
+                            FontWeight="Bold"/>
+                        <TextBox  Margin="10" 
+                            Text="{Binding Actores[0], 
+                                   Source={StaticResource filmInfiltrados}}" 
+                            FontWeight="Bold"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="btnCambiarTitulo" Content="Cambiar Título y otros" 
+                Margin="0,273,330,0" Click="btnCambiarTitulo_Click" />
+
+    </Grid>
+
+</Window>
+
