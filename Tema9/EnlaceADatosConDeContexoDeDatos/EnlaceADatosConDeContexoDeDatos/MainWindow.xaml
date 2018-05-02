@@ -1,0 +1,33 @@
+﻿<Window x:Class="pbl.EnlaceADatosConDeContexoDeDatos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel Margin="0,0,0,10">
+            <StackPanel Name="stpTitulo">
+                <TextBlock TextAlignment="Center" FontSize="30" TextDecorations="Underline" FontStyle="Italic">Datos de persona:</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="30">
+                <StackPanel Name="stpCampos">
+                    <TextBlock Text="Nombre: " Margin="14"/>
+                    <TextBlock Text="Apellido: " Margin="14"/>
+                    <TextBlock Text="Fecha Nacimiento: " Margin="14"/>
+                    <TextBlock Text="Estatura: " Margin="14"/>
+
+                </StackPanel>
+                <StackPanel Name="stpDatos">
+                    <!--Mode=TwoWay para que se actualice lso cambios en los dos sentidos, tanto si se modifica ene l interfaz como en la propiedad-->
+                    <TextBlock Text="{Binding Nombre, Mode=TwoWay}" Margin="10" FontSize="12" FontFamily="Segoe UI Semibold"/>
+                    <TextBlock Text="{Binding Apellidos, Mode=TwoWay}" Margin="10" FontSize="12" FontFamily="Segoe UI Semibold"/>
+                    <TextBlock Text="{Binding FechaNacimiento, Mode=TwoWay}" Margin="12" FontSize="12" FontFamily="Segoe UI Semibold"/>
+                    <TextBlock Text="{Binding Estatura, Mode=TwoWay}" Margin="10" FontSize="12" FontFamily="Segoe UI Semibold"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Name="stpBotones" Orientation="Horizontal" Margin="153,264,204,26">
+            <Button x:Name="btnAnterior" Content="7" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Width="75" FontFamily="Webdings" Click="btnAnterior_Click" Margin="0,0,0,4"/>
+            <Button x:Name="btnSiguiente" Content="8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" FontFamily="Webdings" Click="btnSiguiente_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
