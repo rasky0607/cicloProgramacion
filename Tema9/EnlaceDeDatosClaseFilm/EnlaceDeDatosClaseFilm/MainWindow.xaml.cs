@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+//añadido
+using EnlaceDeDatosClaseFilm;
 
 namespace pbl.EnlaceDeDatosClaseFilm
 {
@@ -35,6 +37,12 @@ namespace pbl.EnlaceDeDatosClaseFilm
             film.Titulo = "Te lo borre";
             film.Genero = Genero.Catastrofismo;
             film.Calificacion = 3.3;
+        }
+
+        private void btnColecciones_Click(object sender, RoutedEventArgs e)
+        {
+            Win_Colecciones ventanaColeciones = new Win_Colecciones();
+            ventanaColeciones.Show();
         }
     }
 }

@@ -7,7 +7,7 @@
     <!--"clr-namespace:pbl.EnlaceDeDatosClaseFilm"- >  Espacio de nombre de la clase Fils.cs-->
     <!--"xmlns:system="clr-namespace:System;assembly=mscorlib" Espacio de nombre de System para referinos a el tipode dato "String" ya que el XAML
     no conoce ese tipo de dato pero si System , por lo que debemos colocar su espaio de nombre y al ser externa , tambien debemos colocar ";assembly=nombre del fichero que contiene las clases de ese espacio de nombre"-->
-    
+
     <!--Enlaza al XAML el espacio de nombre de mi nueva clase Films  xmlns:ejemplo="clr-namespace:pbl.EnlaceDeDatosClaseFilm">-->
 
     <!--Si es una DLL hay que añadirle un parametro mas, y el nombre de la DLL-->
@@ -64,10 +64,10 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="296,328,0,0" TextWrapping="Wrap" Text="{Binding Actores[0], Source={StaticResource filmInfiltrados}}" VerticalAlignment="Top" Width="120" Foreground="#FFF36705" FontWeight="Bold" FontStyle="Italic"/>
         <!--Podemos colocar el "Source={StaticResource filmInfiltrados}" en el padre " Grid Background="Azure" DataContext="{StaticResource filmInfiltrados}" "
         en este caso seria el Grid para ahorranos colocarlo en cada componente hijo del contenedor "Source={StaticResource filmInfiltrados}", "Esto es lo que se denomina en WPF (El contexto de datos)-->
-        
+
         <!--Cambiar el valor de la propiedad  Titulo y otros en la Clase-->
         <Button Name="btnCambiar" Content="Cambiar en la Clase" HorizontalAlignment="Left" Margin="241,387,0,0" VerticalAlignment="Top" Width="121" Height="24" Click="btnCambiar_Click"/>
-
+        <Button Name="btnColecciones" Content="Abrir ventana de colecciones" HorizontalAlignment="Left" Margin="214,416,0,0" VerticalAlignment="Top" Width="176" Height="24" Click="btnColecciones_Click"/>
 
     </Grid>
 </Window>

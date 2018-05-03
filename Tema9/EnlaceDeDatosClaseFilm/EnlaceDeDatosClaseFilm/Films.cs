@@ -33,6 +33,11 @@ namespace pbl.EnlaceDeDatosClaseFilm
 
     class Films: Notificador
     {
+        public override string ToString()
+        {
+               return Titulo+", "+_genero+", "+Calificacion.ToString();
+        }
+
         //ObservableCollection Es un tipo de lsita especial que ya implementa  INotifyPropertyChanged ya de por si entre otros, para que se sincronice autmaticamente.
        
         #region Campos

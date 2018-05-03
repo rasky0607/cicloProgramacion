@@ -1,0 +1,69 @@
+﻿<Window x:Class="EnlaceDeDatosClaseFilm.Win_Colecciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Win_Colecciones" Height="284.21" Width="541.354"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:ejemplo="clr-namespace:pbl.EnlaceDeDatosClaseFilm">
+    <Window.Resources>
+        <!--Recurso estatico-->
+        <!--Conjunto de peliculas dirigidas por este Director-->
+        <ejemplo:Director x:Key="Spielberd" Nombre="Steven Spilelberg" Nacionalidad="USA">
+            <ejemplo:Director.Filmes>
+                <!--Datos pelicula y sus Atores-->
+                <ejemplo:Films Titulo="Jurassik Park" Genero="Aventuras" Oscar="True" Calificacion="4">
+                    <ejemplo:Films.Actores>
+                        <system:String>Sam Neill</system:String>
+                        <system:String>Laura Linney</system:String>
+                        <system:String>Jeff Goldblum</system:String>
+                        <system:String>Richard Atheme</system:String>
+                    </ejemplo:Films.Actores>
+                </ejemplo:Films>
+
+                <!--Datos pelicula y sus Atores-->
+                <ejemplo:Films Titulo="La lista de Shindler" Genero="Drama" Oscar="True" Calificacion="4.5">
+                    <ejemplo:Films.Actores>
+                        <system:String>Lian Nesson</system:String>
+                        <system:String>Ben Kingley</system:String>
+                        <system:String>Ralph Bigun</system:String>
+                    </ejemplo:Films.Actores>
+                </ejemplo:Films>
+
+                <!--Datos pelicula y sus Atores-->
+                <ejemplo:Films Titulo="La historiainterminable" Genero="Aventuras" Oscar="False" Calificacion="5">
+                    <ejemplo:Films.Actores>
+                        <system:String>Manuela Santos</system:String>
+                        <system:String>Jefri Caracama</system:String>
+                        <system:String>Atheme Boloñesa</system:String>
+                    </ejemplo:Films.Actores>
+                </ejemplo:Films>
+
+            </ejemplo:Director.Filmes>
+        </ejemplo:Director>
+        <!--_____________________________________________-->
+
+
+    </Window.Resources>
+    <Grid>
+        <!-- Sintaxys para definir enlace a datos de recursos estadicos: DataContext="{StaticResource Spielberd}"-->
+        <StackPanel DataContext="{StaticResource Spielberd}" Margin="4" HorizontalAlignment="Left">
+            <TextBlock FontSize="16" FontWeight="Bold">Relacion de Filmes</TextBlock>
+            <Label Content="Con un ItemControl:" FontWeight="Bold"/>
+            <ItemsControl ItemsSource="{Binding Filmes}" Margin="10"/>
+            <!--Necesita sobreescribir el metodo Tostring() de  la clase Films para que entienda la coleccion de Films-->
+            <Label Content="Con un ListBox:" FontWeight="Bold"/>
+            <ListBox Name="listBox1" ItemsSource="{Binding Filmes}" Width="200" HorizontalAlignment="Left" SelectedItem="0" Margin="10"/>
+        </StackPanel>
+        <Canvas DataContext="{Binding SelectedItem, ElementName= listBox1}" Background="Azure" Margin="301,10,33,23">
+            <!--titulos de campos-->
+            <TextBlock Text="Genero: "/>
+            <TextBlock Text="Oscar: " Canvas.Top="22"/>
+            <TextBlock Text="Calificacion: " Canvas.Top="44"/>
+            <TextBlock Text="Actores: " Canvas.Top="66"/>
+            <!--valores de los datos enlazados-->
+            <TextBlock Text="{Binding Genero}" Canvas.Top="2" Canvas.Left="100" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Oscar}" Canvas.Top="22" Canvas.Left="100" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Calificacion}" Canvas.Top="44" Canvas.Left="100" FontWeight="Bold"/>
+            <ComboBox ItemsSource="{Binding Actores}" Canvas.Top="66" Canvas.Left="83" FontWeight="Bold" Width="98"/>
+        </Canvas>
+    </Grid>
+</Window>
