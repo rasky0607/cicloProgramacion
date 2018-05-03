@@ -37,10 +37,12 @@
                     </ejemplo:Films.Actores>
                 </ejemplo:Films>
 
-            </ejemplo:Director.Filmes>
+            </ejemplo:Director.Filmes>           
         </ejemplo:Director>
         <!--_____________________________________________-->
 
+        <!--Ejemplo de IValueConverter-->
+        <ejemplo:ConvertirClasificacion x:Key="convertirClasificacion"/>
 
     </Window.Resources>
     <Grid>
@@ -62,7 +64,8 @@
             <!--valores de los datos enlazados-->
             <TextBlock Text="{Binding Genero}" Canvas.Top="2" Canvas.Left="100" FontWeight="Bold"/>
             <TextBlock Text="{Binding Oscar}" Canvas.Top="22" Canvas.Left="100" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Calificacion}" Canvas.Top="44" Canvas.Left="100" FontWeight="Bold"/>
+            <!--Ejemplo de IValueConverter-->
+            <TextBlock Text="{Binding Calificacion,Converter={StaticResource convertirClasificacion}}" Canvas.Top="44" Canvas.Left="100" FontWeight="Bold"/>
             <ComboBox ItemsSource="{Binding Actores}" Canvas.Top="66" Canvas.Left="83" FontWeight="Bold" Width="98"/>
         </Canvas>
     </Grid>

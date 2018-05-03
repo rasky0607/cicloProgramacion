@@ -53,6 +53,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ConvertirClasificacion.cs" />
     <Compile Include="Win_Colecciones.xaml.cs">
       <DependentUpon>Win_Colecciones.xaml</DependentUpon>
     </Compile>
