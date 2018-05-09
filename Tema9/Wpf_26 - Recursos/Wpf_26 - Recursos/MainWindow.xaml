@@ -1,0 +1,12 @@
+﻿<Window x:Class="Wpf_26___Recursos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Wpf_26 - Recursos" Height="350" Width="525">
+    <Window.Resources>
+        <SolidColorBrush x:Key="ColorFondo1" Color="HotPink"/>
+        <SolidColorBrush x:Key="ColorFondo2" Color="LightBlue"/>
+    </Window.Resources>
+    <Grid>
+        <Button Name="botonColor" Width="75" Height="20" Background="{DynamicResource ColorFondo1}" Click="Button_Click">Boton</Button>
+    </Grid>
+</Window>

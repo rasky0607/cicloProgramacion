@@ -1,0 +1,19 @@
+﻿<Application x:Class="Wpf_26___Recursos.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Estilos locales -->
+            <SolidColorBrush x:Key="ColorFondo3" Color="Gold"/>
+            <SolidColorBrush x:Key="ColorFondo4" Color="Silver"/>
+
+            <!-- Estilos desde un archivo -->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+
+    </Application.Resources>
+</Application>
