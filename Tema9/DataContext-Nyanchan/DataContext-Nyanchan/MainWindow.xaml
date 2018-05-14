@@ -1,0 +1,61 @@
+﻿<Window x:Class="DataContext_Nyanchan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Personas Mediante Bindings" Height="368" Width="599" ResizeMode="CanMinimize"
+        xmlns:mio="clr-namespace:DataContext_Nyanchan">
+
+    <Window.Resources>
+        <mio:ConvertirFecha x:Key="convertirFecha"/>
+        <Style x:Key="stlNombreCampos" TargetType="{x:Type TextBlock}">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="12"/>
+            <Setter Property="FontFamily" Value="Palatino Linotype"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+
+        <Style x:Key="stlNombreDatos" TargetType="{x:Type TextBlock}">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="15"/>
+            <Setter Property="FontFamily" Value="Courier New"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+        <Style x:Key="stlFoto" TargetType="Image">
+            <Setter Property="Height" Value="120"/>
+            <Setter Property="Width" Value="90"/>
+
+        </Style>
+
+        <DataTemplate x:Key="dtaTemplate">
+            <StackPanel>
+                <StackPanel Name="stkTitulo">
+                    <TextBlock FontSize="50" FontStyle="Oblique" FontWeight="ExtraBlack">Datos de Personas:</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Name="stkCampos">
+                        <TextBlock Text="Nombre: " Style="{StaticResource stlNombreCampos}"/>
+                        <TextBlock Text="Apellido: " Style="{StaticResource stlNombreCampos}"/>
+                        <TextBlock Text="Fecha Nacimiento: " Style="{StaticResource stlNombreCampos}"/>
+                        <TextBlock Text="Estatura: " Style="{StaticResource stlNombreCampos}"/>
+                    </StackPanel>
+                    <StackPanel Margin="100,0,0,0">
+                        <TextBlock FontWeight="Bold" Text="{Binding Nombre, Mode=TwoWay}" Style="{StaticResource stlNombreDatos}"/>
+                        <TextBlock FontWeight="Bold" Text="{Binding Apellido, Mode= TwoWay}" Style="{StaticResource stlNombreDatos}"/>
+                        <TextBlock FontWeight="Bold" Text="{Binding FechaNacimiento, Mode=TwoWay, Converter={StaticResource convertirFecha}}" Style="{StaticResource stlNombreDatos}"/>
+                        <TextBlock FontWeight="Bold" Text="{Binding Estatura, Mode=TwoWay}" Style="{StaticResource stlNombreDatos}"/>
+                    </StackPanel>
+                    <Image Name="img_foto" Height="100" Width="80" Margin="50,0,0,0" Source="{Binding Foto, Mode=TwoWay}" Style="{StaticResource stlFoto}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnAnterior" Margin="100,10,0,0" Content="7" FontFamily="Webdings" FontSize="40" Click="btnAnterior_Click"/>
+                    <Button Name="btnPosterior" Margin="200,10,0,0" Content="8" FontFamily="Webdings" FontSize="40" Click="btnPosterior_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid Background="#FFFB35"  Name="stkDatos">
+        <ContentControl Content="{Binding}" ContentTemplate="{StaticResource dtaTemplate}"/>
+
+    </Grid>
+</Window>
