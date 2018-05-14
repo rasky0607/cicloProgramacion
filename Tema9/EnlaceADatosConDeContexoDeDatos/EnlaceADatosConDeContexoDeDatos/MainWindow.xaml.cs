@@ -56,6 +56,7 @@ namespace pbl.EnlaceADatosConDeContexoDeDatos
             }
 
             stpDatos.DataContext = personaTmp;//Añadir al contexto de datos la persona leida.
+           
         }
 
         private void btnSiguiente_Click(object sender, RoutedEventArgs e)
