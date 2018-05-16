@@ -1,0 +1,24 @@
+﻿<Window x:Class="DataContext_Nyanchan.ListadoPersonas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Listado de personas" Height="300" Width="300"
+        xmlns:mio="clr-namespace:DataContext_Nyanchan"
+        >
+    <Window.Resources>
+        <DataTemplate x:Key="plantillaParaPersonas">
+            <StackPanel Orientation="Horizontal" Margin="2">
+                <Image Source="{Binding Foto}" Height="70" Width="70"/>
+                <TextBlock Margin="2">
+                    <Run Text="{Binding Nombre}" FontSize="17"/>
+                    <Run Text="{Binding Apellido}" FontSize="12" FontStyle="Italic"/>
+                    <LineBreak/>
+                    <Run Text="{Binding FechaNacimiento}" FontSize="12"/>
+                    <Run Text="{Binding Estatura}" FontSize="12"/>
+                </TextBlock>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <ListBox  Name="lbxlistaPersonas" ItemsSource="{Binding}" ItemTemplate="{StaticResource plantillaParaPersonas}" Margin="10"/>
+    </Grid>
+</Window>

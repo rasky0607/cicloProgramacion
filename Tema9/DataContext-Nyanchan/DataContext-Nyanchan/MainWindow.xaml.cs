@@ -21,7 +21,8 @@ namespace DataContext_Nyanchan
     /// </summary>
     public partial class MainWindow : Window
     {
-        ListaPersonas _listaPersona = new ListaPersonas();
+         ListaPersonas _listaPersona = new ListaPersonas();
+         
         Persona tmp = null;
         int posActual = 0;
 
@@ -39,6 +40,9 @@ namespace DataContext_Nyanchan
             }
             tmp = _listaPersona[posActual];
             stkDatos.DataContext = tmp;
+
+            //ejemplo2 mostrar la lista de personas en un listbox
+            lbxlistaPersonas.DataContext = _listaPersona;
         }
 
         private void btnAnterior_Click(object sender, RoutedEventArgs e)
@@ -50,6 +54,12 @@ namespace DataContext_Nyanchan
             }
             tmp = _listaPersona[posActual];
             stkDatos.DataContext = tmp;
+        }
+
+        private void btnMostrarListapersonas_Click(object sender, RoutedEventArgs e)
+        {
+            ListadoPersonas ltP = new ListadoPersonas();
+            ltP.ShowDialog();
         }
     }
 }
